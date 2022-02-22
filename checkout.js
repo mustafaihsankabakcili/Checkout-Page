@@ -22,15 +22,16 @@ function controlCart() {
     // Tax
     cartTax.textContent = (sum * 0.18).toFixed(2);
 
-    // Shipping
+    // Shipping amount and the Total amount associated with it
     if (allprices.length > 0) {
         cartShipping.textContent = (15).toFixed(2);
+        cartTotal.textContent = (sum + sum * 0.18 + 15).toFixed(2);
+
     } else {
         cartShipping.textContent = (0).toFixed(2);
-    }
+        cartTotal.textContent = (sum + sum * 0.18 + 0).toFixed(2);
 
-    // Total
-    cartTotal.textContent = (sum + sum * 0.18 + 15).toFixed(2);
+    }
 }
 
 controlCart();
