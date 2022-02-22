@@ -37,6 +37,7 @@ function controlCart() {
 controlCart();
 document.addEventListener('click', function(e) {
 
+    // Add functionality to plus and minus symbol
     if ((e.target.classList.contains('fa-plus') || e.target.classList.contains('fa-minus'))) {
 
         // Find the parents and children
@@ -58,7 +59,9 @@ document.addEventListener('click', function(e) {
         product_total_price.textContent = (price.textContent * quantity.textContent).toFixed(2);
     }
 
+    // Add functionality to remove button
     if (e.target.classList.contains('remove-product')) {
+        // Remove parent div
         e.target.parentElement.parentElement.parentElement.remove();
     }
 
